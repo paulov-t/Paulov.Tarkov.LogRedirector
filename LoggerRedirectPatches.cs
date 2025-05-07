@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace Paulov.Tarkov.Matchmaking
+namespace Paulov.Tarkov.LogRedirector
 {
     internal class LoggerRedirectPatches
     {
@@ -85,7 +85,7 @@ namespace Paulov.Tarkov.Matchmaking
                             }
                         }
                         else
-                        { 
+                        {
                         }
                     }
 
