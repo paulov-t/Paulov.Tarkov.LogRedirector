@@ -21,7 +21,7 @@ namespace Paulov.Tarkov.LogRedirector
                     .GetMethods(
                     System.Reflection.BindingFlags.Instance |
                     System.Reflection.BindingFlags.Public)
-                    .Where(x => (x.Name.StartsWith("LogDebug") || (x.Name.StartsWith("LogInfo"))));
+                    .Where(x => (x.Name.Equals("LogDebug") || (x.Name.Equals("LogInfo"))));
 
                 // Iterate through each method and patch it
                 foreach (var method in logDebugMethods)
