@@ -54,6 +54,7 @@ jobs:
         run: echo "The extracted version is ${{ steps.extract-version.outputs.VERSION }}"
   
       - name: Zip remaining files
+        shell: pwsh
         run: |
             Compress-Archive -Path "${{ env.DllName }}\${{ env.DllName }}.dll" -DestinationPath ${{ env.DllName }}.zip
    
