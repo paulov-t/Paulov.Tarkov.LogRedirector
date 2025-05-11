@@ -60,9 +60,9 @@ jobs:
    
       # Create release as draft from the compressed file
       - name: Create Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-            prerelease: true
             generate_release_notes: true
             files: ${{ env.DllName }}.zip
+            token: ${{ secrets.PAT_KEY }}
             tag_name: ${{ env.DllName }}-${{ steps.extract-version.outputs.VERSION }}
